@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thriffty</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script type="text/javascript" src="app.js" defer></script>
+  <header id="header">
+    <a href="Main.html">
+      <img src="./Images/icons/logo.png" class="logo" alt="logo">
+    </a>
+
+<!--Navigation bar-->
+
+    <nav> 
+      <ul id="navbar">
+        <li><a href="Search.html"><svg xmlns="http://www.w3.org/2000/svg" height="25px" width="25px" fill="currentcolor" viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/></svg></a></li>
+        <li onclick="toggleAccount('.Account-panel')"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25px" width="25px" fill="currentcolor" viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/></svg></a></li>
+        <li onclick="CartActive()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"  height="25px" width="25px" fill="currentcolor" viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"/></svg></a></li>
+        <li onclick="SidebarActive()"><a href="#" class="test"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="currentcolor"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg></a></li>
+      </ul> 
+
+      <!--sidebar-->
+
+      <ul id="sidenavbar" class="sidebar">
+        <li onclick="SidebarClose()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="currentcolor"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></a></li>
+        <li><a href="Search.html"><h4>New Arrivals</h4></a></li>
+        <li><a href="Search.html"><h4>Best Sellers</h4></a></li>
+        <li><a href="Search.html"><h4>Summer Collection</h4></a></li>
+        <li><a href="Search.html"><h4 class="Sale">Sale</h4></a></li><br>
+
+        <!--sub Menu-->
+
+        <li><button onclick="togglesubmenu(this)" class="dropdown-btn"><span><h4>Men</h4></span></button>
+        <ul class="sub-menu">
+          <div>
+          <li><a href="#"><h6>TShirts</h6></a></li>
+          <li><a href="#"><h6>Shirts</h6></a></li>
+          <li><a href="#"><h6>Jackets</h6></a></li>
+          <li><a href="#"><h6>Pants</h6></a></li>
+          <li><a href="#"><h6>Shorts</h6></a></li>
+          <li><a href="#"><h6>Jeans</h6></a></li>
+          <li><a href="#"><h6>Accessories</h6></a></li>
+        </div>
+        </ul>
+        </li>
+        <li><button onclick="togglesubmenu(this)" class="dropdown-btn"><span><h4>Woman</h4></span></button>
+        <ul class="sub-menu">
+          <div>
+          <li><a href="#"><h6>TShirts</h6></a></li>
+          <li><a href="#"><h6>Shirts</h6></a></li>
+          <li><a href="#"><h6>Jackets</h6></a></li>
+          <li><a href="#"><h6>Pants</h6></a></li>
+          <li><a href="#"><h6>Shorts</h6></a></li>
+          <li><a href="#"><h6>Jeans</h6></a></li>
+          <li><a href="#"><h6>Accessories</h6></a></li>
+        </div>
+        </ul>
+        </li>
+        <li><button onclick="togglesubmenu(this)" class="dropdown-btn"><span><h4>Accessories</h4></span></button>
+        <ul class="sub-menu">
+          <div>
+          <li><a href="#"><h6>Rings</h6></a></li>
+          <li><a href="#"><h6>Ear Rings</h6></a></li>
+          <li><a href="#"><h6>Necklace</h6></a></li>
+          <li><a href="#"><h6>Keychain</h6></a></li>
+          <li><a href="#"><h6>Others</h6></a></li>
+        </div>
+        </ul>
+        </li>
+        <li><a href="Search.html"><h4>others</h4></a></li><br>
+        <li ><a href="Search.html"><h4>About us</h4></a></li>
+        <li ><a href="Search.html"><h4>Need help?</h4></a></li>
+        <li ><a href="Search.html"><h4>Contact us</h4></a></li>
+      </ul>
+
+
+      <!--Cartbar-->
+
+      <ul id="Cartbar" class="Cart-panel">
+        <li onclick="CloseCart()"><a><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="currentcolor"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></a></li>
+        <li><a><h4>Shopping Cart</h4></a></li>
+        <li class="CartEmpty" ><a><svg xmlns="http://www.w3.org/2000/svg" height="25px" width="25px"  viewBox="0 0 650 400"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"/></svg> Your cart is empty</a></li>
+      </ul>
+      <ul id="Accountbar" class="Account-panel">
+        <li><a>Account</a></li>
+        <li><a>My Orders</a></li>
+        <li><a>Wishlist</a></li>
+        <li><a>Account Details</a></li>
+        <li><a>Log out</a></li>
+      </ul>
+    </nav>
+ </header>
+
+ <!--Hero Section-->
+ 
+   <div>
+      <button onclick="GoBack()" class="carousel-btn back"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+      <button onclick="GoNext()" class="carousel-btn next"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+      </div>
+   <div class="carousel">
+      <div class="group">
+      
+      
+      <div class="card"><a href="html.html"><img src="/Images/hero section/download (3) - Copy.jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/download (4) - Copy.jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/vintage men's fashion - Copy.jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/Yashiki SS20 Yields Clean Silhouettes and Perfectly Slouchy Knitwear - Copy.jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/摄影 _ “意式甜茶” _ 设计师服装look拍摄 - 小红书 - Copy.jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/download (5).jpg"></a></div>
+      <div class="card"><a href="html.html"><img src="/Images/hero section/download (3) - Copy.jpg"></a></div>
+       
+    </div>
+     
+    </div>
+    </div>
+
+    <!--Product cards 1-->
+
+    <div class="heading">
+      <h1>New Arrivals</h1>
+    </div>
+
+    <div>
+      <button onclick="ProductGoBack1()" class="product-btn1 back"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+      <button onclick="ProductGoNext1()" class="product-btn1 next"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+      </div>
+
+    <div class="products-container1">
+
+    <div class="product-card1">
+      <a href="product.html?id=1"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 1</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=2"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 2</h3>
+      <p class="price">₹700</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=3"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 3</h3>
+      <p class="price">₹800</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=4"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 4</h3>
+      <p class="price">₹900</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=5"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 5</h3>
+      <p class="price">₹1,000</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=6"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 6</h3>
+      <p class="price">₹1,100</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=7"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 7</h3>
+      <p class="price">₹1,200</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card1">
+      <a href="product.html?id=8"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Product 8</h3>
+      <p class="price">₹1,300</p>
+      <button >Add to Cart</button>
+    </div>
+    </div>
+
+    <!--Product Cards 2-->
+
+    <div class="heading">
+      <h1>Trending</h1>
+    </div>
+
+    <div>
+      <button onclick="ProductGoBack2()" class="product-btn2 back"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+      <button onclick="ProductGoNext2()" class="product-btn2 next"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentcolor"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+      </div>
+
+
+
+    <div class="products-container2">
+
+    <div class="product-card2">
+      <a href="product.html?id=9"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+     <a href="product.html?id=10"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt Men</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+      <a href="product.html?id=11"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+     <a href="product.html?id=12"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+      <a href="product.html?id=13"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+      <a href="product.html?id=14"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt Men</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+      <a href="product.html?id=15"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+
+    <div class="product-card2">
+      <a href="product.html?id=16"><img src="/Images/products/Men's Plaid College Style Shirt.jpg" alt="Product Name"></a>
+      <h3>Plaid College Style Shirt</h3>
+      <p class="price">₹600</p>
+      <button >Add to Cart</button>
+    </div>
+    </div>
+
+    <div>
+      <a href="#"><img class="BoxCategories" src="./Images/icons/TshirtCategory.webp"></a>
+      <a href="#"><img class="BoxCategories" src="./Images/icons/TshirtCategory.webp"></a>
+      <a href="#"><img class="BoxCategories" src="./Images/icons/TshirtCategory.webp"></a>
+      <a href="#"><img class="BoxCategories" src="./Images/icons/TshirtCategory.webp"></a>
+    </div>
+
+    <!--Scripts-->
+
+ <script>
+  function SidebarActive() {
+    document.querySelector('.sidebar').classList.add('active');
+  }
+
+  function SidebarClose() {
+    document.querySelector('.sidebar').classList.remove('active');
+  }
+</script>
+<script>
+  function CartActive() {
+    document.querySelector('.Cart-panel').classList.add('active');
+  }
+
+  function CloseCart() {
+    document.querySelector('.Cart-panel').classList.remove('active');
+  }
+</script>
+<script>
+  function toggleAccount() {
+    const AccountPanel = document.querySelector('.Account-panel');
+    if(AccountPanel.classList.contains('active')){
+      AccountPanel.classList.remove('active');
+    } else {
+      AccountPanel.classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
